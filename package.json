@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start": "node src/server.js"
+    "test:coverage": "jest --coverage",
+    "test:js": "jest --json --outputFile=jest-results.json",
+    "test:ci": "jest --ci --reporters=default --reporters=jest-junit",
+    "start": "node src/server.js",
+    "dev": "node src/server.js --watch"
   },
   "repository": {
     "type": "git",
@@ -23,6 +27,7 @@
     "express": "^5.2.1"
   },
   "devDependencies": {
-    "jest": "^30.3.0"
+    "jest": "^30.3.0",
+    "supertest": "^7.2.2"
   }
 }
