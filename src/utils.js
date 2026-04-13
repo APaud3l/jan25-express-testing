@@ -14,7 +14,9 @@ function getTasks(){
 }
 
 function addTask(taskData) {
-    return { id: 1, title: taskData.title };
+    const task = { id: tasks.length + 1, ...taskData };
+    tasks.push(task);
+    return task;
 }
 
 module.exports = { getTasks, addTask };
