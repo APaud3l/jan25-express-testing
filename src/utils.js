@@ -19,4 +19,8 @@ function addTask(taskData) {
     return task;
 }
 
-module.exports = { getTasks, addTask };
+function clearTasks() {
+    tasks.length = 0;
+}
+
+module.exports = { getTasks, addTask, clearTasks };

@@ -12,7 +12,11 @@
 //     expect(sum(2, 3)).not.toBe(0);
 // });
 
-const { getTasks, addTask } = require("../src/utils");
+const { getTasks, addTask, clearTasks } = require("../src/utils");
+
+beforeEach(() => {
+    clearTasks();
+});
 
 it('should return empty array initially', () => {
     expect(getTasks()).toEqual([]);
